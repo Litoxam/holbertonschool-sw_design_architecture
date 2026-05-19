@@ -1,0 +1,13 @@
+---
+title: Library Loan System | Sequence Diagram
+---
+sequenceDiagram
+    actor User
+    participant Library
+    participant Book
+
+    User->>Library: create a loan
+    Library->>Book: mark itself as unavailable
+    create participant Loan
+    Library->>Loan: create
+    Library-->>User: loan created
